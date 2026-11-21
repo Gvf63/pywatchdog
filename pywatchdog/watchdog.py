@@ -37,7 +37,7 @@ class Request(IntEnum):
 
 class _IntFlagWithDesc(IntFlag):
     def __new__(cls, value, desc):
-        obj = IntFlag.__new__(cls, value)
+        obj = int.__new__(cls, value)
         obj._value_ = value
         obj.desc = desc
         return obj
